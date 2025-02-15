@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>の宣言をしましょう -->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>code review</title>
+  <script src="script.js"></script> <!-- jsはbody最下部で読みましょう -->
+</head>
+<body>
+  <header>
+    <div> <!-- いらん -->
+      <img src="/image/logo.svg" alt="ロゴ">
+      <dl class="list"><!-- ulかolにしてaタグをliで囲むか、fiv>aにする　dlは定義リスト(dt,ddが必要) -->
+        <li><a href="/about">About</a></li>
+        <li><a href="/works">Works</a></li>
+      </dl>
+    </div>
+  </header>
+  <h1>hogehogeのページへようこそ</h1>
+  <div>
+    <h3>Welcome!</h3> <!-- h1>h2>h3の順にした方がよい -->
+    <div>
+      <h2>何ができる？</h2>
+      <p>ここでは様々なコードのリビューができます！</p>
+      <p>たくさん指摘してくださいね</p>
+      <h2>どうやって指摘するの？</h2>
+      <p>会場にある指示に従ってください！</p>
+    </div>
+  </div>
+  <div class="to-top-button">
+    <button onclick="{()=>{toPageTop()}}">↑</button><!-- Reactに引っ張られてる。onclick="toPageTop()"でよい -->
+  </div>
+  <footer>
+    <p>© 2025 MatsuribaMAX. All rights reserved.</p><!-- &copy;を使った方がよい -->
+  </footer>
+</body>
+</html>
