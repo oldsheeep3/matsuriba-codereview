@@ -1,38 +1,44 @@
-<!-- <!DOCTYPE html>の宣言をしましょう -->
-<html lang="ja">
+<html lang="ja"> <!-- <!DOCTYPE html>の宣言をしましょう -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.cs"> <!-- .cs !? -->
   <title>code review</title>
-  <script src="script.js"></script> <!-- jsはbody最下部で読みましょう -->
+  <script src="/script.js"></script> <!-- jsはbody最下部で読みましょう -->
 </head>
-<body>
+<body class="body"> <!-- bodyにclassは付けないでください -->
   <header>
-    <div> <!-- いらん -->
-      <img src="/image/logo.svg" alt="ロゴ">
-      <dl class="list"><!-- ulかolにしてaタグをliで囲むか、fiv>aにする　dlは定義リスト(dt,ddが必要) -->
-        <li><a href="/about">About</a></li>
-        <li><a href="/works">Works</a></li>
-      </dl>
+    <div>
+      <img src="/logo.svg" alt="ロゴ"> <!-- サイズ指定した方がいい -->
+      <p><a href="/about">about</a>       <a href="/works">Works</a></p> <!-- 空白で位置調整はゴミ -->
     </div>
   </header>
   <h1>hogehogeのページへようこそ</h1>
   <div>
     <h3>Welcome!</h3> <!-- h1>h2>h3の順にした方がよい -->
     <div>
-      <h2>何ができる？</h2>
-      <p>ここでは様々なコードのリビューができます！</p>
-      <p>たくさん指摘してくださいね</p>
+      <h2>何をするの？</h2>
+      <p>・コードのおかしいところを指摘する</p> <!-- ul liを使うべき -->
+      <p>・コードの改善点を指摘する</p>
       <h2>どうやって指摘するの？</h2>
-      <p>会場にある指示に従ってください！</p>
+      <p>・付箋に指摘ポイントを書いて張る！</p>
+    </div>
+    <h2>SNS</h2>
+    <div class="snsLink">
+      <p><div class="snsLink-inner"> <!-- pタグの中にdivタグを入れるな -->
+        <img src="/X.png" alt="Xのアイコン">
+        <a href="https://twitter.com/MatsuribaTech?mx=1">Twitter</a> <!-- Twitter => X -->
+      </div>
+      <br><br> <!-- brを連打しないでください -->
+        <a class="x-icon" href="https://x.com/nxtend_npo">X</a> <!-- beforeでxのアイコンを入れる -->
+      </p>
     </div>
   </div>
-  <div class="to-top-button">
-    <button onclick="{()=>{toPageTop()}}">↑</button><!-- Reactに引っ張られてる。onclick="toPageTop()"でよい -->
+  <div class="go-to-top">
+    <button onclick="{()=>{toPageTop()}}"><img src="/go-to-top.png" alt="上向き矢印" /></button><!-- onclick="toPageTop()"でよい, サイズ指定した方がいい -->
   </div>
   <footer>
-    <p>© 2025 MatsuribaMAX. All rights reserved.</p><!-- &copy;を使った方がよい -->
+    <p>© 2025 MatsuribaMAX. All rights reserved.</p><!-- ©より&copy;を使った方がよい -->
   </footer>
 </body>
 </html>
